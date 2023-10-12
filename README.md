@@ -14,7 +14,7 @@ authorName: 'agustriadji'
 
 ## APIDOC
 
-documentation api with postman file : ["APIDOC for Serverless-prisma-express Inspiro.postman_collection.json"]([https://documenter.getpostman.com/view/559121/2s9YCBvAVG](https://github.com/agustriadji/sam-express-prisma-inspiro/blob/main/APIDOC%20for%20Serverless-prisma-express%20Inspiro.postman_collection.json)).
+documentation api with postman file : ["APIDOC for Serverless-prisma-express Inspiro.postman_collection.json"]([https://documenter.getpostman.com/view/559121/2s9YCBvAVG](https://github.com/agustriadji/sam-express-prisma-inspiro/blob/main/APIDOC%20for%20Serverless-prisma-express%20Inspiro.postman_collection.json).
 
 ## Set DB in .env
 
