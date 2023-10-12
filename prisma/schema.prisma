@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  fullname String @db.VarChar(250)
+  email String @db.VarChar(150) @unique
+  password String @db.VarChar(250)
+  token String? @db.VarChar(250)
+  status Status @default(active)
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+  product Product[]
+  currency_denom Currency_denom[]
+  @@map("user")
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  title String @db.VarChar(150) @unique
+  description String @db.VarChar(250) @default("This Description")
+  author User? @relation(fields: [author_id], references: [id])
+  author_id Int 
+  price Int @default(0)
+  quantity Int @default(0)
+  status Status @default(active)
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+  transaction Transactions[]
+  @@map("Product")
+}
+
+model Currency_denom {
+  id Int @id @default(autoincrement())
+  value Int @unique
+  author User? @relation(fields: [author_id], references: [id])
+  author_id Int 
+  status Status @default(active)
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+  @@map("currency_denom")
+}
+
+model Transactions {
+  id Int @id @default(autoincrement())
+  code String @db.VarChar(100) @unique
+  productID Product? @relation(fields: [product_id], references: [id])
+  product_id Int
+  cash Int
+  total Int
+  change Int
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+  @@map("transaction")
+}
+
+enum Status {
+  active
+  inactive
+}

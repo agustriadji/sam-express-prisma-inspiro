@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "module": "CommonJS",
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+
+    // "strict": true,
+    // "alwaysStrict": true,
+    // "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "target": "es2017",
+    "declaration": true,
+    "sourceMap": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": false,
+
+    "baseUrl": "*.ts",
+    "paths": {
+      "@/*": [
+        "src/tsHandler/auth/*.ts",
+        "src/tsHandler/middleware/*.ts",
+        "src/tsHandler/movies/*.ts",
+        "./src/user/*.ts"
+      ]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "CommonJS",
+      "paths": {
+        "@/*": ["./src/auth/*.ts", "./src/middleware/*.ts", "./src/movies/*.ts", "./src/user/*.ts"]
+      }
+    }
+  },
+  "exclude": ["./dist/**/*", "./node_modules/**/*", "./src/handler.ts"]
+}

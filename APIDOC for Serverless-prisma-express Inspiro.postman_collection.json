@@ -1,0 +1,1568 @@
+{
+	"info": {
+		"_postman_id": "8dbbed27-98e6-4109-9bbc-0ad2583e701c",
+		"name": "APIDOC for Serverless-prisma-express Inspiro",
+		"description": "apidoc for serverless express prisma.\n\nHost: [http://localhost:3000](http://localhost:3000)\n\nVariables Postman\n\nbase_url = [http://localhost:3000](http://localhost:3000)\n\ntoken = TOKEN_KEY after login\n\nsub_path =",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "559121"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get list product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "650"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28a-7hxGcpi9jSAf2KILEie8c4piCzo\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Oct 2023 09:52:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Biscuit\",\n            \"description\": \"This Description\",\n            \"price\": 6000,\n            \"quantity\": 3,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Chips\",\n            \"description\": \"This Description\",\n            \"price\": 8000,\n            \"quantity\": 2,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Oreo\",\n            \"description\": \"This Description\",\n            \"price\": 10000,\n            \"quantity\": 0,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Tango\",\n            \"description\": \"This Description\",\n            \"price\": 12000,\n            \"quantity\": 3,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Cokelat\",\n            \"description\": \"This Description\",\n            \"price\": 15000,\n            \"quantity\": 2,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Read Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View Read Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "access-control-allow-methods",
+									"value": "*"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "364"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 10:51:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": \n        {\n            \"id\": 1,\n            \"title\": \"Biscuit\",\n            \"description\": \"This Description\",\n            \"price\": 6000,\n            \"quantity\": 5,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Snack 1\",\r\n    \"description\":\"this description movie\",\r\n    \"price\":10000,\r\n    \"quantity\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Products",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Movie Test 3\",\r\n    \"description\":\"this description movie\",\r\n    \"rating\":8.2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "243"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"f3-Jj2550l2s4TwLx730Of/zFIhQhA\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 21:16:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Snack 1\",\n        \"description\": \"this description movie\",\n        \"authorId\": 1,\n        \"price\": 10000,\n        \"quantity\": 3,\n        \"status\": \"active\",\n        \"created_at\": \"2023-10-12T02:37:21.384Z\",\n        \"updated_at\": \"2023-10-12T02:37:21.384Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Snack 1 edit\",\r\n    \"description\":\"this description\",\r\n    \"price\":2000,\r\n   \"quantity\":2 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Movie Tesssst\",\r\n    \"description\":\"this description movie\",\r\n    \"rating\":7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "242"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"f2-e+IsiQ6hoJU7SopcWAvgrF6rzrg\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 21:35:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Snack 1 edit\",\n        \"description\": \"this description\",\n        \"authorId\": 1,\n        \"price\": 2000,\n        \"quantity\": 2,\n        \"status\": \"active\",\n        \"created_at\": \"2023-10-12T02:37:21.384Z\",\n        \"updated_at\": \"2023-10-12T02:39:35.466Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove Movies",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/{{sub_path}}/Movies/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"{{sub_path}}",
+										"Movies",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "244"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"f4-f9biiB9i1P+TN2GtLIBxiGquJ1M\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 21:36:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Movie Tesssst\",\n        \"description\": \"this description movie\",\n        \"rating\": 7,\n        \"image\": \"\",\n        \"status\": \"inactive\",\n        \"authorId\": 1,\n        \"created_at\": \"2023-10-03T18:29:19.425Z\",\n        \"updated_at\": \"2023-10-04T21:36:36.697Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"active\" //active or inactive\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products-updatestatus/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products-updatestatus",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\" : \"active\" //active or inactive\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products-updatestatus/6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products-updatestatus",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "239"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ef-92FENgo8fiWgI280U9NT6dUV0GQ\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 20:46:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Snack 1 edit\",\n        \"description\": \"this description\",\n        \"authorId\": 1,\n        \"price\": 2000,\n        \"quantity\": 2,\n        \"status\": \"active\",\n        \"created_at\": \"2023-10-12T02:37:21.384Z\",\n        \"updated_at\": \"2023-10-12T02:41:24.597Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Product manage, require header Authorization"
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Get list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "access-control-allow-methods",
+									"value": "*"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "783"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 10:48:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Pengabdi Setan 2 Comunion\",\n            \"description\": \"adalah sebuahh film horor indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel tahun 2017, Pengabdi Setan.\",\n            \"rating\": 7,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Pengabdi Setan\",\n            \"description\": \"adalah sebuahh film horor indonesia tahun 2017 yang disutradarai dan ditulis oleh Joko Anwar\",\n            \"rating\": 8,\n            \"author\": {\n                \"id\": 1,\n                \"fullname\": \"admin\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":3,\r\n    \"cash\":10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":1,\r\n    \"cash\":2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "200"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"c8-VSv4umXVm9QvcdD9oyzXsDyYWi4\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Oct 2023 09:48:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 2,\n        \"code\": \"code-579\",\n        \"product_id\": 1,\n        \"cash\": 50000,\n        \"total\": 6000,\n        \"change\": 44000,\n        \"created_at\": \"2023-10-12T09:48:43.599Z\",\n        \"updated_at\": \"2023-10-12T09:48:43.599Z\"\n    }\n}"
+						},
+						{
+							"name": "ERR: balance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":1,\r\n    \"cash\":2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "116"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"74-1Fk6trM+SxRAysKyYoA6s0S1Wsg\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Oct 2023 09:49:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sorry, your balance is insufficient\",\n    \"error\": true,\n    \"data\": {\n        \"product_id\": 1,\n        \"cash\": 2000,\n        \"status\": \"active\"\n    }\n}"
+						},
+						{
+							"name": "Empty Stock",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":3,\r\n    \"cash\":10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transaction",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "94"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5e-ArDa3exQgLLyU7LzyzWICH9rHJE\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Oct 2023 09:51:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Empty Stock\",\n    \"error\": true,\n    \"data\": {\n        \"product_id\": 3,\n        \"cash\": 10000,\n        \"status\": \"active\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Transactions API :\n\ncreate transaction cannot require data auth."
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get list users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "93"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5d-aAVJiXv1KrTQsVMqkuV0i3HwNn8\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Oct 2023 19:16:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"fullname\": \"admin\",\n            \"email\": \"admin@email.com\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detail users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "367"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"16f-VNWc7YpdcV+9zGSN5qoaIEeNKOQ\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Oct 2023 21:45:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 1,\n        \"fullname\": \"admin\",\n        \"email\": \"admin@email.com\",\n        \"password\": \"$2b$10$RSqIk2GdtGM/Lrd4hOIFy.V3kg3gvbvpWm647GU3QXK4N1oY7o3zS\",\n        \"token\": null,\n        \"status\": \"active\",\n        \"created_at\": \"2023-10-12T02:18:14.771Z\",\n        \"updated_at\": \"2023-10-12T02:18:14.771Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"admin13\",\r\n    \"email\":\"admin13@email.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullname\":\"admin6\",\r\n    \"email\":\"admin6@email.com\",\r\n    \"password\":\"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "279"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"117-MOWKuaFDunB9B6taoRxV4DRflnY\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 21:40:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 18,\n        \"fullname\": \"admin6\",\n        \"email\": \"admin6@email.com\",\n        \"password\": \"$2a$10$OU317AQsbqnxCm8.RqiZPuIy8hRwi/gmgmPGAwNvZCKPsgFREqFiS\",\n        \"token\": null,\n        \"status\": \"active\",\n        \"created_at\": \"2023-10-04T21:40:03.472Z\",\n        \"updated_at\": \"2023-10-04T21:40:03.472Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"admin6\",\r\n    \"email\":\"admin6@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users//18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"",
+								"18"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullname\":\"admin10\",\r\n    \"email\":\"admin10@email.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/Users/18",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"Users",
+										"18"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "283"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"11b-fE3/176g/1oj8gDFx2FxhqdCHUU\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 22:02:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 18,\n        \"fullname\": \"admin10\",\n        \"email\": \"admin10@email.com\",\n        \"password\": \"$2a$10$OU317AQsbqnxCm8.RqiZPuIy8hRwi/gmgmPGAwNvZCKPsgFREqFiS\",\n        \"token\": null,\n        \"status\": \"inactive\",\n        \"created_at\": \"2023-10-04T21:40:03.472Z\",\n        \"updated_at\": \"2023-10-04T22:02:32.507Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users-updatestatus/18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users-updatestatus",
+								"18"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"inactive\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users-updatestatus/18",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users-updatestatus",
+										"18"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "281"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"119-A7VaJeeyTEBlcVLWQ3z/LlZKK6A\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 22:02:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 18,\n        \"fullname\": \"admin6\",\n        \"email\": \"admin6@email.com\",\n        \"password\": \"$2a$10$OU317AQsbqnxCm8.RqiZPuIy8hRwi/gmgmPGAwNvZCKPsgFREqFiS\",\n        \"token\": null,\n        \"status\": \"inactive\",\n        \"created_at\": \"2023-10-04T21:40:03.472Z\",\n        \"updated_at\": \"2023-10-04T22:02:04.203Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"18"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "remove",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"inactive\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/18",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"18"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "281"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"119-/p+/cXdxb/DjGoWdUlJzqq5bEOw\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 22:01:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 18,\n        \"fullname\": \"admin6\",\n        \"email\": \"admin6@email.com\",\n        \"password\": \"$2a$10$OU317AQsbqnxCm8.RqiZPuIy8hRwi/gmgmPGAwNvZCKPsgFREqFiS\",\n        \"token\": null,\n        \"status\": \"inactive\",\n        \"created_at\": \"2023-10-04T21:40:03.472Z\",\n        \"updated_at\": \"2023-10-04T22:01:32.130Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "require header Authorization"
+		},
+		{
+			"name": "auth sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@email.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/Auth-signin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"Auth-signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "auth",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@email.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/TS/Auth-signin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TS",
+								"Auth-signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "320"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"140-8Gd02MhsaUacboDr7UNQQ16fjaU\""
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 Oct 2023 20:56:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ok\",\n    \"error\": false,\n    \"data\": {\n        \"id\": 1,\n        \"fullname\": \"admin\",\n        \"email\": \"admin@email.com\",\n        \"token\": \"eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjk2MzY2NjEwLCJleHAiOjE2OTY5NzE0MTB9.CtiDKEyDeMcSt7fylyHWM0FGIC1CanCe0_de4hN7LQvDrNkdgkz-8MbHEpX8Sejw\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNjk3MDc3NDQ0LCJleHAiOjE2OTc2ODIyNDR9.TZQ6vKAlVthE91va4Lu4KpSS1PZ8gU9NC_HSj5czc2I9TsyvL5qRiPcQmFcZP1V9",
+			"type": "string"
+		},
+		{
+			"key": "sub_path",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
